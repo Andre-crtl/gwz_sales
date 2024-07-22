@@ -1,8 +1,8 @@
-#add_purchase_cost
+# take out the rounding
 SELECT 
 date_date 
-    ,ROUND(SUM(turnover),2) as turnover_total
-    ,ROUND(SUM(purchase_cost),2) as purchase_cost_total
+    ,SUM(turnover) as turnover_total
+    ,SUM(purchase_cost) as purchase_cost_total
 FROM `data-analytics-bootcamp-363212.course14.gwz_sales`
 GROUP BY date_date
 
